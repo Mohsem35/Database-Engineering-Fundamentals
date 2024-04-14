@@ -15,6 +15,10 @@ Consistent Cashing
 
 But there is just a function and you can always find out it's not really hard or I can build it on function to determine how to consistently hash this input(query) to a server and this case.
 
+<img width="550" alt="Screenshot 2024-04-15 at 12 34 25 AM" src="https://github.com/Mohsem35/Database-Engineering-Fundamentals/assets/58659448/e1a55aa7-e468-41d1-9e2e-18bc8b4b4f7c">
+
 Once you find out which server you want to connect to, you connect to only that server and you send your query to only that server.
 
 You don't want to send your query to all databases. You want to connect to the right database server. 
+
+<img width="550" alt="Screenshot 2024-04-15 at 12 34 49 AM" src="https://github.com/Mohsem35/Database-Engineering-Fundamentals/assets/58659448/efa4c6e5-7ac0-4e38-bc82-f685b4995c2b">
