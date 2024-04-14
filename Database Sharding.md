@@ -46,9 +46,17 @@ num("Input2") % 3
 
 Convert all these ASCII character codes into binary, then convert them back to decimal, and finally perform a modulo operation. Right, which is the remainder of three because I have three nodes.
 
+
+
 That does consistent hashing.
 
 Essentially, they get an input. Give me the port number back so that I can connect to my desired database. 
+
+<img width="505" alt="Screenshot 2024-04-15 at 12 58 18 AM" src="https://github.com/Mohsem35/Database-Engineering-Fundamentals/assets/58659448/7a1e55ad-4801-4a62-8a52-871c603e2ffe">
+
+suppose, input2 value = 10, then the modulus will be 1
+
+calculation: 1 + 5432(1st database instance) = 5433(2nd database instance)
 
 That is called the hash rank as well. So this is like almost like a ring. Cassandra, use this all the time with the shards that they have.
 
