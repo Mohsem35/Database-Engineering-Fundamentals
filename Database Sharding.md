@@ -63,3 +63,49 @@ That is called the hash rank as well. So this is like almost like a ring. Cassan
 
 So every time you have an input, I know which which database to hit.
 
+
+### Horizontal Partitioning vs Sharding 
+
+
+### Example Code with Postgres
+
+
+
+- Spin up 3 postgres instances with identical schema
+    - 5432, 5433, 5434
+- Write to the sharded databases.
+- Reads from the sharded databases.
+
+```shqll
+$ mkdir sharding
+$ vim init.sql
+```
+```sql
+CREATE TABLE URL_TABLE
+(
+    id SERIAL NOT NULL PRIMARY KEY,
+    URL TEXT,
+    URL_ID CHARACTER(5)
+);
+```
+```shell
+vim dockerfile
+```
+```dockerfile
+FROM postgres:16
+COPY init.sql /docker-entrypoint-initdb.d
+```
+
+```shell
+# docker image create 
+docker build -t pgshard .
+
+# spin up containers
+docker run --name pgshard1 -p 5432:5432 -d pgshard
+docker run --name pgshard2 -p 5433:5432 -d pgshard
+docker run --name pgshard3 -p 5434:5432 -d pgshard
+
+docker ps
+```
+
+minimum requirments: node.js installatiion and vscode
